@@ -1,0 +1,132 @@
+// Read me:
+// sass --watch sass/main.scss style.css --no-charset
+
+// Fonts
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+        url('fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('fonts/gilroy-light-webfont.woff2') format('woff2'),
+        url('fonts/gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// Brand colors
+$light-purple: #e4e2f3;
+$dark-purple: #171333;
+$orange-red: #E45F3B;
+
+$body-background-color: $light-purple;
+
+// Typography
+$family-sans-serif: "gilroylight", sans-serif;
+
+
+h1,
+h2,
+h3 {
+    font-family: 'gilroyextrabold';
+}
+
+h1.title {
+    font-size: 196px;
+    line-height: 0.8;
+    text-align: center;
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    margin-top: 100px;
+
+    background: linear-gradient(180.36deg, #B1B0C2 0.31%, rgba(105, 103, 131, 0.3) 51.99%, rgba(27, 23, 62, 0) 87.83%, $light-purple 87.83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+}
+
+h2.subtitle {
+    font-family: "gilroylight";
+    text-align: center;
+}
+
+mark {
+    /* highlight */
+    background: rgba(238, 101, 57, 0.57);
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        height: 3px;
+        background: $dark-purple;
+    }
+
+}
+
+section p {
+    margin-bottom: 1em;
+}
+
+// Elements
+.main-button {
+    background-color: $orange-red !important;
+    color: white !important;
+    @extend .button;
+}
+
+
+// Page
+
+section.bio {
+    background: $dark-purple;
+    color: white;
+    padding: 8em 0;
+    margin: 8em 0;
+}
+
+.boxmb {
+    padding: 1rem;
+    position: relative;
+    padding: 3px;
+    background: linear-gradient(180deg, #555578 0%, rgba(40, 41, 103, 0) 100%);
+
+    .boxmb-in {
+        background: $light-purple;
+        height: 200px;
+        display: flex;
+        align-items: center;
+
+        p {
+            width: 100%;
+        }
+    }
+}
+
+.contact-iframe {
+    width: 100%;
+    height: 700px;
+}
+
+// Import only what you need from Bulma
+//@import "../bulma/bulma.sass";
+
+@import "../bulma/sass/utilities/_all";
+@import "../bulma/sass/base/_all";
+@import "../bulma/sass/elements/_all";
+@import "../bulma/sass/form/_all";
+@import "../bulma/sass/components/_all";
+@import "../bulma/sass/grid/_all";
+@import "../bulma/sass/helpers/_all";
+@import "../bulma/sass/layout/_all";

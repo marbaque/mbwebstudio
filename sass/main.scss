@@ -30,13 +30,6 @@ $body-background-color: $light-purple;
 // Typography
 $family-sans-serif: "gilroylight", sans-serif;
 
-
-h1,
-h2,
-h3 {
-    font-family: 'gilroyextrabold';
-}
-
 h1.title {
     font-size: 196px;
     line-height: 0.8;
@@ -50,12 +43,12 @@ h1.title {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-
 }
 
 h2.subtitle {
     font-family: "gilroylight";
     text-align: center;
+    margin-top: -2em;
 }
 
 mark {

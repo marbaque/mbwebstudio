@@ -10,12 +10,6 @@
   font-weight: normal;
   font-style: normal;
 }
-h1,
-h2,
-h3 {
-  font-family: "gilroyextrabold";
-}
-
 h1.title {
   font-size: 196px;
   line-height: 0.8;
@@ -33,6 +27,7 @@ h1.title {
 h2.subtitle {
   font-family: "gilroylight";
   text-align: center;
+  margin-top: -2em;
 }
 
 mark {

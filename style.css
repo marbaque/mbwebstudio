@@ -63,7 +63,7 @@ section p {
 section.bio {
   background: #171333;
   color: white;
-  padding: 8em 0;
+  padding: 8em 1em;
   margin: 8em 0;
   background: #171333;
   background: linear-gradient(342deg, #171333 0%, #121277 58%);

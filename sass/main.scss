@@ -98,7 +98,7 @@ section p {
 section.bio {
     background: $dark-purple;
     color: white;
-    padding: 8em 0;
+    padding: 8em 1em;
     margin: 8em 0;
     @include dark-gradient();
 }

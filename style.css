@@ -11,12 +11,16 @@
   font-style: normal;
 }
 h1.title {
+  font-family: "gilroyextrabold", sans-serif;
   font-size: 196px;
+  font-size: 18vmin;
+  max-width: 100%;
   line-height: 0.8;
   text-align: center;
   letter-spacing: 0.095em;
   text-transform: uppercase;
   margin-top: 100px;
+  white-space: nowrap;
   background: linear-gradient(180.36deg, #B1B0C2 0.31%, rgba(105, 103, 131, 0.3) 51.99%, rgba(27, 23, 62, 0) 87.83%, #e4e2f3 87.83%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -27,7 +31,9 @@ h1.title {
 h2.subtitle {
   font-family: "gilroylight";
   text-align: center;
-  margin-top: -2em;
+  margin-top: -4em;
+  font-size: 44px;
+  font-size: 5vmin;
 }
 
 mark {
@@ -59,22 +65,82 @@ section.bio {
   color: white;
   padding: 8em 0;
   margin: 8em 0;
+  background: #171333;
+  background: linear-gradient(342deg, #171333 0%, #121277 58%);
 }
 
 .boxmb {
   padding: 1rem;
   position: relative;
   padding: 3px;
+  min-height: 200px;
   background: linear-gradient(180deg, #555578 0%, rgba(40, 41, 103, 0) 100%);
 }
 .boxmb .boxmb-in {
   background: #e4e2f3;
-  height: 200px;
+  min-height: 200px;
+  height: 100%;
   display: flex;
   align-items: center;
+  padding: 1em;
 }
 .boxmb .boxmb-in p {
   width: 100%;
+}
+
+.grid4 .boxmb {
+  margin-bottom: 1em;
+}
+.grid4 .boxmb .boxmb-in {
+  align-items: start;
+}
+.grid4 .boxmb .boxmb-in p {
+  background-color: #e4e2f3;
+}
+.grid4 .boxmb:nth-of-type(1) .boxmb-in {
+  background: url(svg/responsive.svg) no-repeat #e4e2f3 90% 90%;
+  background-size: 55%;
+}
+.grid4 .boxmb:nth-of-type(2) {
+  grid-row-end: span 2;
+}
+.grid4 .boxmb:nth-of-type(2) .boxmb-in {
+  background: url(svg/meter.svg) no-repeat #e4e2f3;
+  background-position: bottom -20px right -20px;
+  background-size: 65%;
+}
+.grid4 .boxmb:nth-of-type(3) {
+  grid-column-end: span 2;
+}
+.grid4 .boxmb:nth-of-type(3) .boxmb-in {
+  background: url(svg/keyboard.svg) no-repeat #e4e2f3;
+  background-position: right 10% bottom 0px;
+  background-size: 55% 75%;
+}
+.grid4 .boxmb:nth-of-type(4) .boxmb-in {
+  background: url(svg/wp.svg) no-repeat #e4e2f3;
+  background-position: right 5% bottom -50px;
+  background-size: 75%;
+}
+.grid4 .boxmb:nth-of-type(5) .boxmb-in {
+  background: url(svg/truck.svg) no-repeat #e4e2f3 center bottom;
+  background-size: 60%;
+}
+.grid4 .boxmb:nth-of-type(6) .boxmb-in {
+  background: url(svg/mail.svg) no-repeat #e4e2f3 90% bottom;
+  background-size: 65%;
+}
+@media (min-width: 500px) {
+  .grid4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+@media (min-width: 960px) {
+  .grid4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .contact-iframe {

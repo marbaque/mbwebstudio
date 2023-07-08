@@ -1,0 +1,61 @@
+mark {
+    /* highlight */
+    background: #42DE5B;
+    position: relative;
+    padding: 0 2px;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background: tomato;
+        mix-blend-mode: lighten;
+        transition: all 0.25s ease-in-out;
+    }
+
+    &:hover::before {
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+.main-button {
+    background-color: $orange-red !important;
+    color: white !important;
+    @extend .button;
+    overflow: hidden;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-bottom: calc(0.5em - 1px);
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: calc(0.5em - 1px);
+        background: $dark-purple;
+        transform: translate3d(0, 110%, 0);
+        transition: transform 0.25s cubic-bezier(0.5, 0.5, 0.3, 1);
+
+
+        // @media (max-width: 1024px) {
+        //     padding: 9px 20px;
+        // }
+        // @media (max-width: 768px) {
+        //     padding: 7px 16px;
+        // }
+    }
+
+    &:hover::after {
+        transform: translate3d(0, 0, 0);
+    }
+
+}

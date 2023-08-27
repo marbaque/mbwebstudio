@@ -88,7 +88,8 @@ section.bio {
     position: relative;
     padding: 3px;
     min-height: 200px;
-    background: linear-gradient(180deg, #555578 0%, rgba(40, 41, 103, 0) 100%);
+    background: linear-gradient(180deg, #555578 0%, rgba(40, 41, 103, 0.1) 100%);
+    border-radius: 0.5em;
 
     .boxmb-in {
         background: $light-purple;
@@ -97,6 +98,7 @@ section.bio {
         display: flex;
         align-items: center;
         padding: 1em;
+        border-radius: 0.4em;
 
         p {
             width: 100%;
